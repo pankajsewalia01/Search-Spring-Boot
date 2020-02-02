@@ -1,0 +1,40 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<name>web</name>
+	<artifactId>web</artifactId>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>com.liners</groupId>
+		<artifactId>search</artifactId>
+		<version>0.0.1.DEV</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.liners</groupId>
+			<artifactId>service</artifactId>
+			<version>${search.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+	<finalName>${search}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<configuration>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+						<warName>${search}</warName>
+					</configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>	
+
+</project>
