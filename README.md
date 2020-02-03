@@ -1,2 +1,2 @@
 # Search-Spring-Boot
-In-Memory search service using spring boot
+A scratch of an In-Memory search engine/service using spring boot
